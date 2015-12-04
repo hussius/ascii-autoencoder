@@ -1,6 +1,12 @@
 <h3>Short description</h3>
 Autoencoder implementation in TensorFlow. Visualizes the (up to 75x75 first) reconstructed values every 1000 training epochs. The background color corresponds to the absolute difference between the reconstructed value and the actual (target) value. These are typically in [0,1] by design (scaling is applied by default, but can be turned off) even though tanh is used as an activation function (so values in [-1,1] are possible in the reconstruction). We use bins corresponding to different errors, with bin 0 (dark green) being the best (small error) and red being the worst. A colored digit in the foreground indicates that the entry in question has moved to another bin (improved or worsened) during the last epoch. The digit indicates which bin it is in now.
 
+Todo:
+- choose layerwise training or not
+- add weight decay
+- changing the weight initialization
+- specify random seed
+
 <h3>Dependencies</h3>
 - tensorflow
 - pandas
